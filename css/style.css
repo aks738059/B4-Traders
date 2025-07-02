@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-style: italic; */
+}
+/* navbar hover style */
+.nav-link:hover{
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+}
+
+/* footer text color */
+#footer a{
+        text-decoration: none;
+        color: black;
+}
+
+.fs-6,.text-white{
+        text-decoration: none;
+}
+
+.hr{
+    border: 1px solid white;
+}
+
+.icon{
+    transition: all 3s ease;
+    margin: 0.2em;
+}
+
+.icon:hover{
+    background-color: green;
+    border-radius: 50%;
+    transform: rotate(360deg);
+}
+
+#working-time li{
+    list-style: none;
+}
+
+#working-time a{
+        text-decoration: none;
+}
