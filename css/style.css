@@ -46,3 +46,12 @@ body{
 #working-time a{
         text-decoration: none;
 }
+
+/* About page css style */
+#about{
+    background-image: url(/image/About_background.jpg);
+      background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    height: 300px;
+}
