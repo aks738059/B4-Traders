@@ -55,3 +55,11 @@ body{
     background-size: cover;
     height: 300px;
 }
+
+#buyers{
+    background-image: url(/image/About_background.jpg);
+      background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    height: 500px;
+}
