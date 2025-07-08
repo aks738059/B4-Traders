@@ -64,6 +64,14 @@ body{
     height: 500px;
 }
 
+/* seller banner */
+#seller-banner{
+    background-image: url(https://www.b4traders.com/assets/sellersback-21f7b42a39ae1171ca25e15366eac1bab7a123a7526ed406074a790e9f153927.png);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    height: 500px;
+}
 #table td{
     background: none;
     color: white;
@@ -71,6 +79,18 @@ body{
 }
 
 #table th{
+    background: none;
+    color: white;
+    border: none;
+}
+
+#seller-table td{
+    background: none;
+    color: white;
+    border: none;
+}
+
+#seller-table th{
     background: none;
     color: white;
     border: none;
