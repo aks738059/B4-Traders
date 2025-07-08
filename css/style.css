@@ -58,7 +58,7 @@ body{
 
 #buyers{
     background-image: url(https://www.b4traders.com/assets/buyerbck-acc71324a8aef891fd065c809d843dc9bddb8c0384ae6eb8117ad6359c2a9b5c.png);
-      background-repeat: no-repeat;
+    background-repeat: no-repeat;
     position: relative;
     background-size: cover;
     height: 500px;
@@ -75,3 +75,36 @@ body{
     color: white;
     border: none;
 }
+/* slodes img */
+
+     .carousel-item {
+      padding: 30px 0;
+    }
+
+    .logo-card {
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      background-color: white;
+      height: 100%;
+      transition: transform 0.3s;
+    }
+
+    .logo-card img {
+      max-height: 60px;
+      object-fit: contain;
+    }
+
+    .logo-card:hover {
+      transform: scale(1.05);
+    }
+    #buyer-img{
+      background-image: url(https://www.b4traders.com/assets/buyerbck-acc71324a8aef891fd065c809d843dc9bddb8c0384ae6eb8117ad6359c2a9b5c.png);
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: cover;
+      height: 360px;
+
+    }
+    
