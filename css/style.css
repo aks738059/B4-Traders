@@ -39,9 +39,9 @@ body{
     transform: rotate(360deg);
 }
 
-#working-time li{
+/* #working-time li{
     list-style: none;
-}
+} */
 
 #working-time a{
         text-decoration: none;
@@ -50,7 +50,7 @@ body{
 /* About page css style */
 #about{
     background-image: url(/image/About_background.jpg);
-      background-repeat: no-repeat;
+    background-repeat: no-repeat;
     position: relative;
     background-size: cover;
     height: 300px;
