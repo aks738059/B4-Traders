@@ -1,436 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop All Auction</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Auctions Dashboard</title>
+<link rel="stylesheet" href="style.css" >
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <h2 class="fw-bold">HindForcedTraders</h2>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item text-center">
-                            <a class="nav-link active mx-2 bg-primary text-white mt-3 btn" aria-current="page"
-                                href="Shop.html">SHOP ALL AUCTIONS</a>
-                        </li>
-                        <li class="nav-item text-center">
-                            <a class="nav-link active mx-2 bg-info btn mt-3 text-white" aria-current="page"
-                                href="Buyer.html">FOR
-                                BUYERS</a>
-                        </li>
-                        <li class="nav-item text-center">
-                            <a class="nav-link active mx-2 bg-primary btn mt-3 text-white" aria-current="page"
-                                href="Seller.html">FOR SELLERS</a>
-                        </li>
-                        <li class="nav-item text-center">
-                            <a class="nav-link active mx-2 bg-info btn mt-3 text-white" aria-current="page"
-                                href="Support.html">SUPPORT</a>
-                        </li>
-                        <li class="nav-item text-center mt-3">
-                            <a class="nav-link active mx-2 btn bg-primary text-white px-auto w-auto" aria-current="page"
-                                href="Sign.html">SIGN IN</a>
-                        </li>
-                        <div class="dropdown mx-2 text-center mt-3">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                SELECT LANGUAGE
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Hindi</a></li>
-                                <li><a class="dropdown-item" href="#">English</a></li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="mt-3 col-lg-2 border border-info py-2 ">
-                        <div class="d-flex">
-                            <p class="text-uppercase px-2 fs-5">Filter</p>
-                            <p class="mx-5 px-4">Clear</p>
-                        </div>
-                        <div class="dropdown">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                BIDDING MODE
-                            </button>
-                            <ul class="dropdown-menu px-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                                    <label class="form-check-label" for="radioDefault1">
-                                        Open
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
-                                        checked>
-                                    <label class="form-check-label" for="radioDefault2">
-                                        Hybrid
-                                    </label>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="dropdown mt-4">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                PRICE RANGE
-                            </button>
-                            <ul class="dropdown-menu px-2">
-                                <div class="form-check me-4">
-                                    <input type="range" class="form-range" id="customRange1">
+<header class="dashboard-header">
+  <div class="header-top">
+    <h1>Live Auctions Dashboard</h1>
+    <p>Monitor and participate in real-time auctions</p>
+    <div class="action-buttons">
+      <button class="btn refresh">🔄 Refresh</button>
+      <button class="btn alert">🔔 Alerts</button>
+    </div>
+  </div>
 
-                                    </label>
-                                </div>
+  <div class="stats">
+    <div class="stat-card green">
+      <span class="icon">📈</span>
+      <p>Live Auctions</p>
+      <strong>24</strong>
+    </div>
+    <div class="stat-card blue">
+      <span class="icon">👥</span>
+      <p>Active Bidders</p>
+      <strong>156</strong>
+    </div>
+    <div class="stat-card orange">
+      <span class="icon">💲</span>
+      <p>Total Value</p>
+      <strong>₹45.2M</strong>
+    </div>
+    <div class="stat-card red">
+      <span class="icon">⏰</span>
+      <p>Ending Soon</p>
+      <strong>3</strong>
+    </div>
+  </div>
 
-                            </ul>
-                        </div>
-                        <div class="dropdown mt-4">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                CATEGORY
-                            </button>
-                            <ul class="dropdown-menu px-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                    <label class="form-check-label" for="checkDefault">
-                                        Electronics and Appliances
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Fashion and Style
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        IT
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Other
-                                    </label>
-                                </div>
-                            </ul>
-                        </div>
+  <div class="tabs">
+    <button class="active">Live Auctions (18)</button>
+    <button>Ending Soon (3)</button>
+    <button>Watched (7)</button>
+    <button>Won (2)</button>
+  </div>
 
-                        <div class="dropdown mt-4">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                SUB CATEGORY
-                            </button>
-                            <ul class="dropdown-menu px-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                    <label class="form-check-label" for="checkDefault">
-                                        Accessories
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Air Cooler
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Blanket
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Bulb
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Ceiling Fan
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Electric Chimeney
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Electric Iron
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Toy
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        USB Cabel
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Whashing machine
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Water Heater
-                                    </label>
-                                </div>
-                            </ul>
-                        </div>
-
-                        <div class="dropdown mt-4">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                CONDITION
-                            </button>
-                            <ul class="dropdown-menu px-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                    <label class="form-check-label" for="checkDefault">
-                                        Mixed
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        New
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Not Tested
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Open Box
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Very Good
-                                    </label>
-                                </div>
-
-                            </ul>
-                        </div>
-
-                        <div class="dropdown mt-4">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                LOCATION
-                            </button>
-                            <ul class="dropdown-menu px-2">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
-                                    <label class="form-check-label" for="checkDefault">
-                                        Varanasi
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Jaunpur
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        New Delhi
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Mumbai
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Gujarat
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Rajasthan
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Pune
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="checkChecked">
-                                    <label class="form-check-label" for="checkChecked">
-                                        Punjab
-                                    </label>
-                                </div>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mt-4 col-lg-9">
-                        <div class="d-flex">
-                            <input type="email" class="form-control w-25" id="exampleFormControlInput1"
-                                placeholder="Search for lot"> <button type="button"
-                                class="btn btn-outline-info mx-3">Search</button>
-                            <div class="dropdown">
-                                <a class="btn border-info dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Product Search By Short
-                                </a>
-
-                                <ul class="dropdown-menu px-4">
-                                    <li><a class="dropdown-item" href="#">Short by: Time Left</a></li>
-                                    <li><a class="dropdown-item" href="#">Short by: Recent</a></li>
-                                    <li><a class="dropdown-item" href="#">Price: High to Low </a></li>
-                                    <li><a class="dropdown-item" href="#">Price: Low to High </a></li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                        <div class="card mt-5" style="width: 18rem;">
-                            <div class="text-center mt-2">
-                                <img src="https://media.corporate-ir.net/media_files/IROL/17/176060/Oct18/Amazon%20logo.PNG"
-                                    class="img-fluid" alt="" width="100px">
-                                <p class="mt-3"><i class="fa-solid fa-stopwatch"></i> 02 Hr 16 Min 17 Sec</p>
-                            </div>
-                            <div class="text-center">
-                                <img src="https://s3.ap-south-1.amazonaws.com/remarketing-prod/images/attachments/000/852/099/original/open-uri20250710-9-n0osh9?1752129964"
-                                    class="img-fluid" alt="..." width="180px">
-                            </div>
-
-                            <div class="card-body text-center">
-                                <p class="btn border border-info mx-2"><i class="fa-solid fa-location-dot"></i> Banglore
-                                </p>
-                                <p class="btn border border-info mx-2 px-3">Not Tested</p>
-                            </div>
-                            <div class="text-center d-flex">
-                                <p class="fw-bold">Top Brand, Memory Card, Memory Card Other ||... As condition ||
-                                    Amazon Inventory</p>
-                            </div>
-                            <div class=" float-start d-flex justify-content-around">
-                                <p>Quantity</p>
-                                <p class="fw-bold">1475 items</p>
-                            </div>
-                            <div class="d-flex justify-content-around">
-                                <p>MRP</p>
-                                <p class="fw-bold"><i class="fa-solid fa-indian-rupee-sign"></i> 88,08,029</p>
-                            </div>
-                            <div class="d-flex justify-content-around">
-                                <p>Floor Price</p>
-                                <p class="fw-bold"><i class="fa-solid fa-indian-rupee-sign"></i> 31,49,000</p>
-                            </div>
-                            <div class="d-flex justify-content-around">
-                                <p><i class="fa-solid fa-van-shuttle"></i> Self Pickup</p>
-                                <p class="fw-bold"><i class="fa-solid fa-cube"></i> Hybrid </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="filters">
+    <input type="text" placeholder="Search auctions...">
+    <select>
+      <option>All Categories</option>
+      <option>Industrial Materials</option>
+      <option>Electronics</option>
+      <option>Machinery</option>
+      <option>Pharmaceuticals</option>
+      <option>Agriculture</option>
+      <option>Chemicals</option>
+    </select>
+  </div>
+</header>
+<main>  <div class="auction-container">
+    <!-- Card 1 -->
+    <div class="card" data-time="2:38:46">
+      <div class="status-badge">Live</div>
+      <div class="fav-icon">♡</div>
+      <div class="views">156</div>
+      <img src="img/img1.avif" alt="Premium Steel Rods - 500 Tons">
+      <div class="card-content">
+        <h3>Premium Steel Rods - 500 Tons</h3>
+        <p>Industrial Materials<br>Industrial Steel Corp</p>
+        <div class="time-remaining">
+          <div>⏱ Time Remaining</div>
+          <div class="time-box">
+            <span class="hours">02</span>H
+            <span class="minutes">38</span>M
+            <span class="seconds">46</span>S
+          </div>
         </div>
-    </main> <br><br>
-    <footer>
-        <div class="container-fluid bg-dark mt-0">
-            <div class="container">
-                <div class="row">
-                    <div class="text-white m-auto w-auto mt-3  col- col-sm-6 col-md-4 col-lg-3" id="working-time">
-                        <li class="mx-3"><a href="About.html" class="text-white">About Us</a></li>
-                        <li class="mx-3"><a href="Contact.html" class="text-white">Contact Us</a></li>
-                        <li class="mx-3"><a href="FAQ.html" class="text-white">FAQ</a></li>
-                    </div>
-                    <div class="text-white m-auto w-auto mt-3  col- col-sm-6 col-md-4 col-lg-3" id="working-time">
-                        <li class="mx-3"><a href="Term.html" class="text-white">Terms of Purchase</a></li>
-                        <li class="mx-3"><a href="Item.html" class="text-white">Items Condition</a></li>
-                        <li class="mx-3"><a href="Privacy.html" class="text-white">Privacy Policy</a></li>
-                    </div>
-                    <div class="text-white m-auto w-auto mt-3 col- col-sm-6 col-md-4 col-lg-3" id="working-time">
-                        <li class="mx-3"><i class="fa-solid fa-phone"></i> 636-377-7534</li>
-                        <li class="mx-3"><i class="fa-solid fa-envelope"></i> info@hindsolgmail.com</li>
-                    </div>
-                    <div class="text-white m-auto w-auto mt-3 col- col-sm-6 col-md-6 col-lg-3">
-                        <address>
-                            <p>Sisawa, Babatpur, Varanasi</p>
-                            <p>+91 993-644-1217</p>
-                            <p>aks738059@gmail.com</p>
-                            <a href="#"><img src="image/facebook-icon-removebg-preview.png" class="icon" alt="icon"
-                                    width="35px"></a>
-                            <a href="#"><img src="image/instagram-icon-removebg-preview.png" class="icon" alt="icon"
-                                    width="35px"></a>
-                            <a href="#"><img src="image/twitter-icon-removebg-preview.png" class="icon" alt="icon"
-                                    width="35px"></a>
-                            <a href="#"><img src="image/instagram-icon-removebg-preview.png" class="icon" alt="icon"
-                                    width="35px"></a>
-                        </address>
-                    </div>
-                    <hr class="hr">
-                    <div class="text-white mt-3 w-auto m-auto text-center col-lg-4">
-                        <p>&copy All Right Received 2025. HindForcedTraders </p>
-                    </div>
-                    <div class="text-white m-auto w-auto mt-3 col- col-sm-6 col-md-6 col-lg-3">
-                        <!-- <img src="image/logo-a1f2338e.png" class="img-fluid" alt="" width="200px"> -->
-                        <h2 class="fw-bold text-white">HindForcedTraders</h2>
-                    </div>
-                    <div class="text-white mt-3 w-auto m-auto text-center col- col-lg-4">
-                        <a href="#" id="link" class="text-white">Design & Developed By: Hindsol Software Pvt. Ltd</a>
-                    </div>
-                </div>
-            </div><br>
+        <div class="bid-section">
+          <div>
+            <p>Current Bid</p>
+            <p class="current-bid">₹12,50,000</p>
+          </div>
+          <div>
+            <p>Next Bid</p>
+            <p>₹12,75,000</p>
+          </div>
         </div>
-    </footer>
+        <button class="place-bid">Place Bid</button><br>
+        <br>
+        <div class="secondary-buttons">
+          <button class="view-details">View Details</button>
+          <button class="watch">Watch</button>
+        </div>
+      </div>
+    </div>
 
+    <!-- Card 2 -->
+    <div class="card" data-time="5:05:31">
+      <div class="status-badge">Live</div>
+      <div class="fav-icon">♡</div>
+      <div class="views">89</div>
+      <img src="img/img2.jpeg" alt="Electronic Components Bulk Lot">
+      <div class="card-content">
+        <h3>Electronic Components Bulk Lot</h3>
+        <p>Electronics<br>TechSupply Solutions</p>
+        <div class="time-remaining">
+          <div>⏱ Time Remaining</div>
+          <div class="time-box">
+            <span class="hours">05</span>H
+            <span class="minutes">05</span>M
+            <span class="seconds">31</span>S
+          </div>
+        </div>
+        <div class="bid-section">
+          <div>
+            <p>Current Bid</p>
+            <p class="current-bid">₹3,75,000</p>
+          </div>
+          <div>
+            <p>Next Bid</p>
+            <p>₹3,90,000</p>
+          </div>
+        </div>
+        <button class="place-bid">Place Bid</button><br>
+        <br>
+        <div class="secondary-buttons">
+          <button class="view-details">View Details</button>
+          <button class="watch">Watch</button>
+        </div>
+      </div>
+    </div>
 
+    <!-- Card 3 -->
+    <div class="card" data-time="1:02:01">
+      <div class="status-badge ending">Ending Soon</div>
+      <div class="fav-icon">♡</div>
+      <div class="views">67</div>
+      <img src="img/img3.jpeg" alt="Textile Manufacturing Equipment">
+      <div class="card-content">
+        <h3>Textile Manufacturing Equipment</h3>
+        <p>Machinery<br>Textile Pro Industries</p>
+        <div class="time-remaining">
+          <div>⏱ Time Remaining</div>
+          <div class="time-box">
+            <span class="hours">01</span>H
+            <span class="minutes">02</span>M
+            <span class="seconds">01</span>S
+          </div>
+        </div>
+        <div class="bid-section">
+          <div>
+            <p>Current Bid</p>
+            <p class="current-bid">₹8,90,000</p>
+          </div>
+          <div>
+            <p>Next Bid</p>
+            <p>₹9,20,000</p>
+          </div>
+        </div>
+        <button class="place-bid">Place Bid</button><br>
+        <br>
+        <div class="secondary-buttons">
+          <button class="view-details">View Details</button>
+          <button class="watch">Watch</button>
+        </div>
+      </div>
+    </div>
+  </div><br>
+  <br>
+  <br>
+  <div class="auction-container">
+    <div class="card" data-time="0:11:10">
+      <div class="status-badge hot">Hot</div>
+      <div class="fav-icon">♡</div>
+      <div class="views">78</div>
+      <img src="img/img4.webp" alt="Pharmaceutical Raw Materials">
+      <div class="card-content">
+        <h3>Pharmaceutical Raw Materials</h3>
+        <p>Pharmaceuticals<br>PharmaChem Solutions</p>
+        <div class="time-remaining">
+          <div>⏱ Time Remaining</div>
+          <div class="time-box">
+            <span class="hours">00</span>H
+            <span class="minutes">11</span>M
+            <span class="seconds">10</span>S
+          </div>
+        </div>
+        <div class="bid-section">
+          <div>
+            <p>Current Bid</p>
+            <p class="current-bid">₹2,25,000</p>
+          </div>
+          <div>
+            <p>Next Bid</p>
+            <p>₹2,40,000</p>
+          </div>
+        </div>
+        <button class="place-bid">Place Bid</button><br>
+        <br>
+        <div class="secondary-buttons">
+          <button class="view-details">View Details</button>
+          <button class="watch">Watch</button>
+        </div>
+      </div>
+    </div>
 
+    <div class="card" data-time="3:19:55">
+      <div class="status-badge">Live</div>
+      <div class="fav-icon">♡</div>
+      <div class="views">134</div>
+      <img src="img/img5.jpg" alt="Agricultural Processing Equipment">
+      <div class="card-content">
+        <h3>Agricultural Processing Equipment</h3>
+        <p>Agriculture<br>AgriTech Machinery</p>
+        <div class="time-remaining">
+          <div>⏱ Time Remaining</div>
+          <div class="time-box">
+            <span class="hours">03</span>H
+            <span class="minutes">19</span>M
+            <span class="seconds">55</span>S
+          </div>
+        </div>
+        <div class="bid-section">
+          <div>
+            <p>Current Bid</p>
+            <p class="current-bid">₹5,50,000</p>
+          </div>
+          <div>
+            <p>Next Bid</p>
+            <p>₹5,75,000</p>
+          </div>
+        </div>
+        <button class="place-bid">Place Bid</button><br>
+        <br>
+        <div class="secondary-buttons">
+          <button class="view-details">View Details</button>
+          <button class="watch">Watch</button>
+        </div>
+      </div>
+    </div>
 
+    <div class="card" data-time="0:31:20">
+      <div class="status-badge">Live</div>
+      <div class="fav-icon">♡</div>
+      <div class="views">92</div>
+      <img src="img/img6.jpg" alt="Chemical Processing Equipment">
+      <div class="card-content">
+        <h3>Chemical Processing Equipment</h3>
+        <p>Chemicals<br>ChemTech Industries</p>
+        <div class="time-remaining">
+          <div>⏱ Time Remaining</div>
+          <div class="time-box">
+            <span class="hours">00</span>H
+            <span class="minutes">31</span>M
+            <span class="seconds">20</span>S
+          </div>
+        </div>
+        <div class="bid-section">
+          <div>
+            <p>Current Bid</p>
+            <p class="current-bid">₹7,80,000</p>
+          </div>
+          <div>
+            <p>Next Bid</p>
+            <p>₹8,10,000</p>
+          </div>
+        </div>
+        <button class="place-bid">Place Bid</button><br>
+        <br>
+        <div class="secondary-buttons">
+          <button class="view-details">View Details</button>
+          <button class="watch">Watch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+  <script>
+    // Countdown Timer
+    document.querySelectorAll('.card').forEach(card => {
+      let hours = parseInt(card.querySelector('.hours').innerText);
+      let minutes = parseInt(card.querySelector('.minutes').innerText);
+      let seconds = parseInt(card.querySelector('.seconds').innerText);
 
+      setInterval(() => {
+        seconds--;
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+        }
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+        }
+        if (hours < 0) {
+          hours = 0;
+          minutes = 0;
+          seconds = 0;
+        }
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+        card.querySelector('.hours').innerText = String(hours).padStart(2, '0');
+        card.querySelector('.minutes').innerText = String(minutes).padStart(2, '0');
+        card.querySelector('.seconds').innerText = String(seconds).padStart(2, '0');
+      }, 1000);
+    });
+  </script>
 </body>
-</body>
-
 </html>
